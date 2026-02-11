@@ -13,7 +13,7 @@
 
 	GM_addStyle(`
     .playback-overlay__container.clip, .playback-overlay__container.live, .playback-overlay__container.preview, .playback-overlay__container.singleliveevent, .playback-overlay__container.vod, [data-testid="overlay"] {
-      background: linear-gradient(1turn, #00000070 16%, #0000 30%) !important;
+      background: unset !important;
       padding-bottom: 0.5rem !important;
     }
     .playback-metadata__container.channel-guide .playback-metadata__container-title, .playback-metadata__container.clip .playback-metadata__container-title, .playback-metadata__container.live .playback-metadata__container-title, .playback-metadata__container.preview .playback-metadata__container-title, .playback-metadata__container.singleliveevent .playback-metadata__container-title, .playback-metadata__container.vod .playback-metadata__container-title, h1.contentPrimary {
@@ -33,7 +33,7 @@
     }
 
     .playback-header__container, [data-testid="overlay"] > div:first-child {
-        background: linear-gradient(180deg, #00000082, transparent) !important;
+        background: unset !important;
     }
     .playback-header__container.hidden {
         top: -4rem !important;
