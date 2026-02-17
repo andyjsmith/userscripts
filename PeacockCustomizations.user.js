@@ -52,4 +52,30 @@
       margin-bottom: 0 !important;
     }
   `);
+
+	// Skip intro ad that's played on every reload
+	const observer = new MutationObserver((mutations, observer) => {
+		const countdown = document.querySelector("[data-testid=countdown]");
+		if (!countdown) return;
+
+		console.log("HANDLE VIDEO");
+		const video = document.querySelector("video");
+		if (!video) {
+			return;
+		}
+		video.remove();
+		observer.disconnect();
+
+		// Audio source still plays, so fast forward
+		video.addEventListener("play", () => {
+			console.log("PLAY");
+			video.playbackRate = 10;
+			video.currentTime = 1000000;
+		});
+	});
+
+	observer.observe(document.body, {
+		childList: true,
+		subtree: true,
+	});
 })();
