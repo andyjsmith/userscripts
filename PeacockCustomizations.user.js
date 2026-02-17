@@ -4,7 +4,7 @@
 // @description Various Peacock customizations
 // @namespace   https://ajsmith.org
 // @grant       GM_addStyle
-// @version     1.0
+// @version     1.1
 // @author      Andy Smith
 // ==/UserScript==
 
